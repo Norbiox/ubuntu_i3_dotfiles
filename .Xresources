@@ -1,0 +1,94 @@
+! #---Colors---#
+! special
+*.foreground:   #ABB2BF
+*.background:   #282C34
+*.cursorColor:  #ABB2BF
+
+! black
+*.color0:       #282C34
+*.color8:       #3E4452
+
+! red
+*.color1:       #E06C75
+*.color9:       #BE5046
+
+! green
+*.color2:       #98C379
+*.color10:      #98C379
+
+! yellow
+*.color3:       #E5C07B
+*.color11:      #D19A66
+
+! blue
+*.color4:       #61AFEF
+*.color12:      #61AFEF
+
+! magenta
+*.color5:       #C678DD
+*.color13:      #C678DD
+
+! cyan
+*.color6:       #56B6C2
+*.color14:      #56B6C2
+
+! white
+*.color7:       #ABB2BF
+*.color15:      #5C6370
+
+
+Xcursor.size: 22
+Xcursor.theme: Paper
+
+
+! #---URxvt---#
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 92x24
+URxvt.internalBorder: 4
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+!URxvt.depth: 24
+URxvt.iso14755: false
+URxvt.mouseWheelScrollPage:         true
+URxvt*saveLines:                    5000
+
+URxvt*font: xft:Fira Code:style=Medium:size=11,xft:Symbola,xft:Noto Emoji:minspace=False
+URxvt*boldFont: xft:Fira Code:style=Bold:size=11,xft:Symbola,xft:Noto Emoji:minspace=False
+            
+URxvt.perl-ext-common:              default,keyboard-select,font-size
+URxvt*perl-ext:                     url-select
+URxvt.keysym.C-Up:                  font-size:increase
+URxvt.keysym.C-Down:                font-size:decrease
+URxvt.keysym.C-S-Up:                font-size:incglobal
+URxvt.keysym.C-S-Down:              font-size:decglobal
+URxvt.keysym.C-equal:               font-size:reset
+URxvt.keysym.C-slash:               font-size:show
+
+URxvt.keysym.M-Escape:              perl:keyboard-select:activate
+URxvt.keysym.M-slash:               perl:keyboard-select:search
+URxvt.keyboard-select.clipboard:    true
+
+URxvt.keysym.M-u:                   perl:url-select:select_next
+URxvt.url-select.launcher:          /usr/bin/xdg-open
+URxvt.url-select.underline:         true
+URxvt.urlLauncher:                  firefox
+URxvt.urlButton:                    1
+
+URxvt.keysym.Shift-Control-V:       eval:paste_clipboard
+URxvt.keysym.Shift-Control-C:       eval:selection_to_clipboard
+
+URxvt.keysym.Shift-Up:              command:\033]720;1\007
+URxvt.keysym.Shift-Down:            command:\033]721;1\007
+
+URxvt.keysym.Control-Left:          \033[1;5D
+URxvt.keysym.Shift-Control-Left:    \033[1;6D
+URxvt.keysym.Control-Right:         \033[1;5C
+URxvt.keysym.Shift-Control-Right:   \033[1;6C
+URxvt.keysym.Control-Up:            \033[1;5A
+URxvt.keysym.Shift-Control-Up:      \033[1;6A
+URxvt.keysym.Control-Down:          \033[1;5B
+URxvt.keysym.Shift-Control-Down:    \033[1;6B

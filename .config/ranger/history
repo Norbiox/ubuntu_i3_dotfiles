@@ -1,0 +1,9 @@
+open_with 
+rename ranger
+mkdir ext
+
+search vin
+search repo
+mkdir config
+open_with vim
+delete
