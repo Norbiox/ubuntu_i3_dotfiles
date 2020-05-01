@@ -140,7 +140,7 @@ alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 
 # User aliases
-alias upd="sudo apt-get install update && sudo apt-get install upgrade"
+alias upd="sudo apt update && sudo apt upgrade"
 alias keys="cat .config/i3/config | grep '^bindsym \$mod+' | sed 's/^bindsym \$mod+//'"
 alias h="history"
 alias hg="history | grep"
@@ -165,5 +165,6 @@ alias gpullo="git pull --rebase origin ${parse_git_branch}"
 
 # Docker aliases and functions
 function dexec() {
-    docker exec -it "$1" bash
+    command="${@:3}"
+    docker exec -it -w "$2" "$1" "${command:-bash}"
 }

@@ -7,3 +7,4 @@ search repo
 mkdir config
 open_with vim
 delete
+mkdir .config

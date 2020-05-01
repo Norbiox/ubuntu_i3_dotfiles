@@ -36,3 +36,5 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"

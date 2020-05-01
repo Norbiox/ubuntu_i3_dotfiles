@@ -6,7 +6,7 @@ markup=pango
 
 
 [weather]
-interval=600
+interval=3600
 
 
 [cpu_usage]

@@ -11,8 +11,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf.vim'
-"" Plug 'w0rp/ale'
-Plug 'davidhalter/jedi-vim'
 call plug#end()
 
 set laststatus=2
