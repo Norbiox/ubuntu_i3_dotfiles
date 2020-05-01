@@ -1,0 +1,34 @@
+#!/usr/bin/python3
+import argparse
+import clipboard
+import sys
+
+
+PASSWORDSFILE = ""
+
+
+class bcolors:
+    OKBLUE = "\033[94m"
+    OKGREEN = "\033[92m"
+    FAIL = "\033[91m"
+    ENDC = "\033[0m"
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Copy password to given service to clipboard")
+    parser.add_argument('servicename')
+    args = parser.parse_args()
+
+    with open(PASSWORDSFILE) as file:
+        for line in file.readlines():
+            words = line.split()
+            if words[0] == args.servicename:
+                clipboard.copy(words[1])
+                print(
+                    f"{bcolors.OKGREEN}Password for {bcolors.OKBLUE}{args.servicename}{bcolors.OKGREEN} copied to clipboard{bcolors.ENDC}"
+                )
+                sys.exit(0)
+    print(
+        f"{bcolors.FAIL}Oops! Password for {bcolors.OKBLUE}{args.servicename}{bcolors.FAIL} not found{bcolors.ENDC}"
+    )
+    sys.exit(1)

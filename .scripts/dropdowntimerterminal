@@ -1,0 +1,2 @@
+#!/bin/sh
+echo "Set up timer using 'termdown [time] && notify-send break' command" && bash
